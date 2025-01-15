@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.snackbar.Snackbar
 import com.shruti.navigationtask.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -25,6 +26,7 @@ class HomeFragment : Fragment() {
     private var param2: String? = null
     lateinit var binding: FragmentHomeBinding
     lateinit var mainActivity: MainActivity
+    var list = arrayOf("a", "b", "c","d")
     var  name = ""
     var email = ""
     var phone = ""
@@ -61,6 +63,29 @@ class HomeFragment : Fragment() {
             AlertDialog.Builder(mainActivity).apply {
                 setTitle("Hello ")
                 setMessage("Welcome")
+                setPositiveButton("yes"){_,_,->
+                    Toast.makeText(mainActivity,"yes", Toast.LENGTH_SHORT).show()
+                }
+                setNegativeButton("no"){_,_,->
+                    Toast.makeText(mainActivity,"no", Toast.LENGTH_SHORT).show()
+                }
+                setNeutralButton("cancel"){_,_,->
+                    Toast.makeText(mainActivity,"cancel", Toast.LENGTH_SHORT).show()
+                }
+                setCancelable(false)
+            }.show()
+        }
+        binding.btnsnackbar.setOnClickListener {
+            Snackbar.make(it,"This is a snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("undo", {Toast.makeText(mainActivity,"Snackbar undo",Toast.LENGTH_SHORT)})
+                .show()
+        }
+        binding.btnalert2.setOnClickListener {
+            AlertDialog.Builder(mainActivity).apply {
+                setTitle("Hello ")
+                setItems(list){_,which->
+                    Toast.makeText(mainActivity,list[which],Toast.LENGTH_SHORT).show()
+                }
                 setPositiveButton("yes"){_,_,->
                     Toast.makeText(mainActivity,"yes", Toast.LENGTH_SHORT).show()
                 }

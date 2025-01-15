@@ -47,4 +47,23 @@
         android:text="Alert Dialog"
         android:textColor="@color/white"
         android:id="@+id/btnalert"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_with_border"
+        android:text="Snackbar"
+        android:textColor="@color/white"
+        android:id="@+id/btnsnackbar"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_with_border"
+        android:text="Alert Dialog 2"
+        android:textColor="@color/white"
+        android:id="@+id/btnalert2"/>
 </LinearLayout>
