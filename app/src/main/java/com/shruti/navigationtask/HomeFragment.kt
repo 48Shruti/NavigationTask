@@ -58,7 +58,6 @@ class HomeFragment : Fragment() {
         binding.tvname.setText(name)
         binding.tvemail.setText(email)
         binding.tvphone.setText(phone)
-        binding.tvemail.setText(getEmail)
         binding.btnalert.setOnClickListener {
             AlertDialog.Builder(mainActivity).apply {
                 setTitle("Hello ")
@@ -77,7 +76,7 @@ class HomeFragment : Fragment() {
         }
         binding.btnsnackbar.setOnClickListener {
             Snackbar.make(it,"This is a snackbar", Snackbar.LENGTH_SHORT)
-                .setAction("undo", {Toast.makeText(mainActivity,"Snackbar undo",Toast.LENGTH_SHORT)})
+                .setAction("undo", {Toast.makeText(mainActivity,"Snackbar undo",Toast.LENGTH_SHORT).show()})
                 .show()
         }
         binding.btnalert2.setOnClickListener {

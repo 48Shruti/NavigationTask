@@ -18,11 +18,11 @@
         android:text="Hello Sign in !"
         android:textStyle="bold"
         android:textSize="40dp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/guide_h_25"
-        android:layout_marginStart="25dp"
         android:textColor="@color/white"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -44,7 +44,6 @@
                 android:layout_marginTop="60dp"
                 android:textStyle="bold"
                 android:layout_marginEnd="30dp"
-                android:inputType="textEmailAddress"
                 android:textSize="18sp"/>
             <EditText
                 android:layout_width="match_parent"
@@ -53,6 +52,7 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@android:color/transparent"
                 android:id="@+id/etemail"
+                android:inputType="textEmailAddress"
                 android:hint="Enter Email"
                 android:layout_marginEnd="30dp"/>
             <TextView

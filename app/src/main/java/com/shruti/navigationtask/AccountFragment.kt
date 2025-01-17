@@ -54,14 +54,19 @@ class AccountFragment : Fragment() {
         binding.btnsignup.setOnClickListener {
             if (binding.etname.text.isNullOrEmpty()) {
                 binding.etname.error = "Enter name"
+                Toast.makeText(mainActivity,"Enter name", Toast.LENGTH_SHORT).show()
             } else if (binding.etphone.text.isNullOrEmpty()) {
                 binding.etphone.error = "Enter phone "
+                Toast.makeText(mainActivity,"Enter phone", Toast.LENGTH_SHORT).show()
             } else if (binding.etemail.text.isNullOrEmpty()) {
                 binding.etemail.error = "Enter email"
+                Toast.makeText(mainActivity,"Enter email", Toast.LENGTH_SHORT).show()
             } else if (binding.etpassword.text.isNullOrEmpty()) {
                 binding.etpassword.error = "Enter password"
+                Toast.makeText(mainActivity,"Enter password", Toast.LENGTH_SHORT).show()
             } else if (binding.etconfirmpassword.text.isNullOrEmpty()) {
                 binding.etconfirmpassword.error = "Enter confirm password"
+                Toast.makeText(mainActivity,"Enter confirm password ", Toast.LENGTH_SHORT).show()
             } else if (binding.etpassword.text.toString() != binding.etconfirmpassword.text.toString()) {
                 Toast.makeText(mainActivity, "Passwords are not matched", Toast.LENGTH_SHORT).show()
             } else {
